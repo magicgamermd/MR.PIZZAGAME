@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR.PIZZA GAME</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <center>
+        
+        <audio id="game-audio" src="game-music.mp3" loop="loop"></audio>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+    
+        <div id="start-screen">
+            <img src="game-logo.png">
+            <button id="start-button"><img src='start.png'></button>
+            <audio id="start-audio" src="start.m4a"></audio>
+            
+            <img id="animated-image" src="intro.png" alt="Animated Image">
+            <audio id="voice-sound">
+                <source src="mrpizza.m4a" type="audio/mpeg">
+            </audio>
+            
+        </div>
+        
+
+        <script>
+            // add event listener to the Start button
+            var startButton = document.getElementById('start-button');
+            startButton.addEventListener('click', function() {
+                // play game music
+                var gameAudio = document.getElementById('game-audio');
+                gameAudio.play();
+                
+            });
+        </script>
+        
+        <script src="script.js"></script>
+    </center>
+</body>
+</html>
